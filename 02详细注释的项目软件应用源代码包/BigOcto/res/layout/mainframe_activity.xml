@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/mainframe_text1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="热门"
+            android:textSize="18.0dip" 
+            android:textColor="@drawable/itemcolor"
+            android:background="#CCCCCC"/>
+
+        <TextView
+            android:id="@+id/mainframe_text2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="搜索"
+            android:textSize="18.0dip" 
+            android:textColor="@drawable/itemcolor"
+            android:background="#CCCCCC"/>
+
+        <TextView
+            android:id="@+id/mainframe_text3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="收藏夹"
+            android:textSize="18.0dip" 
+            android:textColor="@drawable/itemcolor"
+            android:background="#CCCCCC"/>
+       	<TextView
+            android:id="@+id/mainframe_text4"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="设置"
+            android:textSize="18.0dip" 
+            android:textColor="@drawable/itemcolor"
+            android:background="#CCCCCC"/>
+    </LinearLayout>
+   	
+    <ImageView
+        android:id="@+id/cursor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:src="@drawable/mainframe_underline" />
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mainframe_Pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:background="#000000"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+    
+
+</LinearLayout>

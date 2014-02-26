@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.seu.xueZhang.entity.Comments" table="COMMENTS" lazy ="false">
+		<!-- ID -->
+		<id name="comment_id" type="java.lang.Long" column="COMMENT_ID">
+			<!-- ID生成策略 -->
+			<generator class="sequence">
+				<param name="sequence">COMMENTS_SEQ</param>
+			</generator>
+		</id>
+		<!-- 对象属性和表的字段的对应关系 -->
+		<property name="mark" ></property>
+		<property name="comments" ></property>
+		<property name="comment_date" ></property>
+		
+		<!-- 用户对评论1对多关系-->
+		<many-to-one name="user" column="user_id" lazy ="false"></many-to-one>
+		<!-- 书对评论1对多关系 -->
+		<many-to-one name="book" column="book_id" lazy ="false"></many-to-one>
+	</class>
+</hibernate-mapping>

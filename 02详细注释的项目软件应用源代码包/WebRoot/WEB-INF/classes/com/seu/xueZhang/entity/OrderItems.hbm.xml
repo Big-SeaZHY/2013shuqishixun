@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.seu.xueZhang.entity.OrderItems" table="ORDERITEMS">
+		<!-- ID -->
+		<id column="ITEM_ID" name="item_id" type="java.lang.Long">
+			<!-- ID生成策略 -->
+			<generator class="sequence">
+				<param name="sequence">ORDERITEMS_SEQ</param>
+			</generator>
+		</id>
+		<!-- 对象属性和表的字段的对应关系 -->
+		<property name="quntity"></property>
+		<property name="price"></property>
+
+		<!-- 一对多映射配置  column:user对象对对应的外键名称	-->
+		<many-to-one name="orders" column="ORDER_ID"></many-to-one>
+		
+		<!-- 一对一映射 -->
+		<many-to-one name="book" column="BOOK_ID" unique="true"></many-to-one>
+	</class>
+</hibernate-mapping>

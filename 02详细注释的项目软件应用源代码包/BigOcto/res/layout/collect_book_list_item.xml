@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:paddingTop="15sp"
+    android:orientation="horizontal" >
+    
+
+	 
+ 
+	 <LinearLayout  
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:paddingLeft="20sp"
+	     android:orientation="horizontal">
+	 <TextView
+	     android:id="@+id/collection_listitem_book_number"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     />
+     <TextView 
+       android:id="@+id/collect_listitem_book_name"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="17sp"
+       android:textColor="#2932E1"/>
+     </LinearLayout>
+     
+	<LinearLayout
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_marginLeft="15sp"
+	     android:orientation="vertical">
+   	<TextView 
+       android:id="@+id/collect_listitem_book_author"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       />
+   	
+    <TextView 
+	    android:id="@+id/collect_listitem_book_price"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textColor="#FF0000"
+	   />
+    <TextView 
+	    android:id="@+id/collect_listitem_book_press"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    />
+    <TextView 
+	    android:id="@+id/collect_listitem_book_date"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	  />
+	</LinearLayout>
+</LinearLayout>

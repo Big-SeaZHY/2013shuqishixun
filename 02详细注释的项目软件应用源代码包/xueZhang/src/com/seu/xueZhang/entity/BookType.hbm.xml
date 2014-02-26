@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.seu.xueZhang.entity.BookType" table="BOOKTYPE">
+		<!-- ID -->
+		<id column="TYPE_ID" name="type_id" type="java.lang.Long">
+			<!-- ID生成策略 -->
+			<generator class="sequence">
+				<param name="sequence">BOOK_TYPE_SEQ</param>
+			</generator>
+		</id>
+		<!-- 对象属性和表的字段的对应关系 -->
+		<property column="TYPE_NAME" name="type_name" type="java.lang.String" />
+		
+		<!-- 一对多的关系映射 -->
+		<!--书类型和书之间的1对多映射，type_id作为外键 -->
+
+		<set name="books" cascade="save-update" inverse="true">
+			<key column="TYPE_ID" foreign-key="FK_TYPE_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.Book" />
+		</set>
+	</class>
+</hibernate-mapping>

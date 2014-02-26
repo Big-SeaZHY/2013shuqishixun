@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.seu.xueZhang.entity.Book" table="BOOK" lazy ="false">
+		<!-- ID -->
+		<id column="BOOK_ID" name="book_id" type="java.lang.Long">
+			<!-- ID生成策略 -->
+			<generator class="sequence">
+				<param name="sequence">BOOK_SEQ</param>
+			</generator>
+		</id>
+		<!-- 对象属性和表的字段的对应关系 -->
+		<property column="BOOK_NAME" name="book_name" type="java.lang.String" />
+		<property column="PRICE" name="price" type="double" />
+		<property name="author"  column="AUTHOR"></property>
+		<property name="publisher"></property>
+		<property name="version"></property>
+		<property name="stock_count"></property>
+		<property name="sale_count"></property>
+		<property name="collect_count"></property>
+		<property name="outline"></property>
+		
+		<!-- 一对多的关系映射 -->
+		<!--书对评论1对多关系 -->
+	
+		<set name="comments" cascade="all" inverse="true" lazy ="false">
+			<key column="book_id" foreign-key="FK1_BOOK_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.Comments" />
+		</set>
+
+		<!-- 书类型和书之间的一对多关系	-->
+		<many-to-one name="bookType" column="TYPE_ID" lazy ="false"></many-to-one>
+		
+		<!-- 书和收藏夹之间的1对n关系 -->
+		<set name="cItems" cascade="all" inverse="true">
+			<key column="book_id" foreign-key="FK2_BOOK_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.CollectionItems" />
+		</set>
+		<!-- 书和购物车之间的1对n关系 -->
+		<set name="pItems" cascade="all" inverse="true" lazy ="false">
+			<key column="book_id" foreign-key="FK3_BOOK_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.Pur_Items" />
+		</set>
+		<!-- 书和缩略图之间的1对n关系 -->
+		<set name="thu_img" cascade="all" inverse="true" lazy ="false">
+			<key column="book_id" foreign-key="FK4_BOOK_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.Thu_img" />
+		</set>
+		<!-- 书和详细图之间的1对n关系 -->
+		<set name="det_img" cascade="all" inverse="true" lazy ="false">
+			<key column="book_id" foreign-key="FK5_BOOK_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.Det_img" />
+		</set>
+	</class>
+</hibernate-mapping>

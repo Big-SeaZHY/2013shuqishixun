@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seu.bigocto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name="com.seu.bigocto.mainframe.MainFrameActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- browse activity start-->
+         	<activity
+           	 	android:name="com.seu.bigocto.browse.BrowseCommodityActivity"
+            	android:theme="@style/AppTheme" >
+        	</activity>
+        	
+        <!-- browse activity end -->
+        
+        <!-- set activity start -->
+           	<activity
+           	 	android:name="com.seu.bigocto.setting.SettingLoginActivity"
+            	android:theme="@style/AppTheme" >
+	            <intent-filter>
+	                <category android:name="android.intent.category.DEFAULT" />
+	            </intent-filter>
+       		</activity>
+       		<activity
+		        android:name="com.seu.bigocto.setting.SettingMyInfoActivity"
+            	android:theme="@style/AppTheme" >
+   	            <intent-filter>
+	                <category android:name="android.intent.category.DEFAULT" />
+	            </intent-filter>
+       		</activity>
+       		
+ 		    <activity
+		        android:name="com.seu.bigocto.setting.SettingRegisterActivity"
+            	android:theme="@style/AppTheme" >
+   	            <intent-filter>
+	                <category android:name="android.intent.category.DEFAULT" />
+	            </intent-filter>
+       		</activity>
+       		
+ 		    <activity
+		        android:name="com.seu.bigocto.setting.TradeCommodityActivity"
+            	android:theme="@style/AppTheme" >
+   	            <intent-filter>
+	               <category android:name="android.intent.category.DEFAULT" />
+	            </intent-filter>
+       		</activity>
+       		
+ 		    <activity
+		        android:name="com.seu.bigocto.setting.SettingAccountActivity"
+            	android:theme="@style/AppTheme" >
+   	            <intent-filter>
+	               <category android:name="android.intent.category.DEFAULT" />
+	            </intent-filter>
+       		</activity>
+       		
+   		    <activity
+		        android:name="com.seu.bigocto.setting.SettingContactActivity"
+            	android:theme="@style/AppTheme" >
+   	            <intent-filter>
+	               <category android:name="android.intent.category.DEFAULT" />
+	            </intent-filter>
+       		</activity>
+
+        <!-- set activity end -->
+        
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+</manifest>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+ 	 <filter-class>com.seu.xueZhang.filter.LoginFilter</filter-class>
+ </filter>
+ <filter-mapping>
+  	<filter-name>LoginFilter</filter-name>
+  	<url-pattern>/home/home.jsp</url-pattern>
+  	<url-pattern>/page/comment.jsp</url-pattern>
+  	<url-pattern>/page/infomanager.jsp</url-pattern>
+  	<url-pattern>/page/lianxiXueZhang.jsp</url-pattern>
+  	<url-pattern>/page/orderCheck.jsp</url-pattern>
+  	<url-pattern>/page/register.jsp</url-pattern>
+  	<url-pattern>/page/registerFail.jsp</url-pattern>
+  	<url-pattern>/page/registerSuccess.jsp</url-pattern>
+  	<url-pattern>/page/searchResult.jsp</url-pattern>
+  	<url-pattern>/page/shoppingCart.jsp</url-pattern>
+  	<url-pattern>/page/shoppingSuccess.jsp</url-pattern>
+  	<url-pattern>/page/updateinfo.jsp</url-pattern>
+  	<url-pattern>/home/homeDetail.jsp</url-pattern>
+ </filter-mapping>
+     <servlet>
+    <servlet-name>Login</servlet-name>
+   
+    <servlet-class>com.seu.xueZhang.action.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.action.RegisterSev</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>FindPwdSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.action.FindPwdSev</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ModifySelfInfoSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.action.ModifySelfInfoSev</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddCommentSev</servlet-name>
+
+  
+    <servlet-class>com.seu.xueZhang.action.AddCommentSev</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddCollectionSev</servlet-name>
+   
+    <servlet-class>com.seu.xueZhang.action.AddCollectionSev</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteCollectionSev</servlet-name>
+    
+    <servlet-class>com.seu.xueZhang.action.DeleteCollectionSev</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QuerySelfInfoSev</servlet-name>
+    
+    <servlet-class>com.seu.xueZhang.action.QuerySelfInfoSev</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RechargeSev</servlet-name>
+   
+    <servlet-class>com.seu.xueZhang.action.RechargeSev</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindBookSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.action.FindBookSev</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>OrderCheckSev</servlet-name>
+  	<servlet-class>com.seu.xueZhang.action.OrderCheckSev</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShoppingCartSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.action.ShoppingCartSev</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>CheckInSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.action.CheckInSev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DirectOrderCheckSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.action.DirectOrderCheckSev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidBroSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidBroSev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidLoginSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidLoginSev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidCollectionSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidCollectionSev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidPurchaseSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidPurchaseSev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidInfoSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidInfoSev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidRecordSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidRecordSev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidBookDetailSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidBookDetailSev</servlet-class>
+  </servlet>
+    <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidAddCollectionSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidAddCollectionSev</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IdentitySev</servlet-name>
+    <servlet-class>com.seu.xueZhang.action.IdentitySev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidFavoriteSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidFavoriteSev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidTradeSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidTradeSev</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AndroidRegisterSev</servlet-name>
+    <servlet-class>com.seu.xueZhang.android.AndroidRegisterSev</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/servlet/Login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>RegisterSev</servlet-name>
+    <url-pattern>/servlet/RegisterSev</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>FindPwdSev</servlet-name>
+    <url-pattern>/servlet/FindPwdSev</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>ModifySelfInfoSev</servlet-name>
+    <url-pattern>/servlet/ModifySelfInfoSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCommentSev</servlet-name>
+    <url-pattern>/servlet/AddCommentSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCollectionSev</servlet-name>
+    <url-pattern>/servlet/AddCollectionSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteCollectionSev</servlet-name>
+    <url-pattern>/servlet/DeleteCollectionSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QuerySelfInfoSev</servlet-name>
+    <url-pattern>/servlet/QuerySelfInfoSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindBookSev</servlet-name>
+    <url-pattern>/servlet/FindBookSev</url-pattern>
+  </servlet-mapping>	
+  <servlet-mapping>
+  	<servlet-name>OrderCheckSev</servlet-name>
+  	<url-pattern>/servlet/OrderCheckSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShoppingCartSev</servlet-name>
+    <url-pattern>/servlet/ShoppingCartSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RechargeSev</servlet-name>
+  	<url-pattern>/servlet/RechargeSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CheckInSev</servlet-name>
+  	<url-pattern>/servlet/CheckInSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DirectOrderCheckSev</servlet-name>
+    <url-pattern>/servlet/DirectOrderCheckSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidBroSev</servlet-name>
+    <url-pattern>/servlet/AndroidBroSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidLoginSev</servlet-name>
+    <url-pattern>/servlet/AndroidLoginSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidCollectionSev</servlet-name>
+    <url-pattern>/servlet/AndroidCollectionSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidPurchaseSev</servlet-name>
+    <url-pattern>/servlet/AndroidPurchaseSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidInfoSev</servlet-name>
+    <url-pattern>/servlet/AndroidInfoSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidRecordSev</servlet-name>
+    <url-pattern>/servlet/AndroidRecordSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidBookDetailSev</servlet-name>
+    <url-pattern>/servlet/AndroidBookDetailSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IdentitySev</servlet-name>
+    <url-pattern>/servlet/IdentitySev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidFavoriteSev</servlet-name>
+    <url-pattern>/servlet/AndroidFavoriteSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidTradeSev</servlet-name>
+    <url-pattern>/servlet/AndroidTradeSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidRegisterSev</servlet-name>
+    <url-pattern>/servlet/AndroidRegisterSev</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AndroidAddCollectionSev</servlet-name>
+    <url-pattern>/servlet/AndroidAddCollectionSev</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>page/login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

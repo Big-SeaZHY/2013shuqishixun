@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.seu.xueZhang.entity.Rec_Addr" table="REC_ADDR">
+		<!-- ID -->
+		<id name="addr_id" type="java.lang.Long" column="ADD_ID">
+			<!-- ID生成策略 -->
+			<generator class="sequence">
+				<param name="sequence">REC_ADDR_SEQ</param>
+			</generator>
+		</id>
+		<!-- 对象属性和表的字段的对应关系 -->
+		<property name="rec_addr" ></property>
+		<property name="rec_name" ></property>
+		<property name="rec_phone" ></property>
+		<property name="rec_idCard" ></property>
+		
+		<many-to-one name="user" column="user_id"></many-to-one>
+	</class>
+</hibernate-mapping>

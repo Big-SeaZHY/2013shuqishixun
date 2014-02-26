@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.seu.xueZhang.entity.Pur_Items" table="PUR_ITEMS" lazy ="false">
+		<!-- ID -->
+		<id column="ITEM_ID" name="item_id" type="java.lang.Long">
+			<!-- ID生成策略 -->
+			<generator class="sequence">
+				<param name="sequence">PUR_ITEMS_SEQ</param>
+			</generator>
+		</id>
+		<!-- 对象属性和表的字段的对应关系 -->
+		<property name="quantity"  />
+		
+		<!-- 用户对购物车项1对多映射	-->
+		<many-to-one name="user" column="USER_ID" lazy ="false"></many-to-one>
+		
+		<!-- 购物车项和书之间的1对n映射 -->
+		<many-to-one name="book" column="BOOK_ID" lazy ="false"></many-to-one>
+	</class>
+</hibernate-mapping>

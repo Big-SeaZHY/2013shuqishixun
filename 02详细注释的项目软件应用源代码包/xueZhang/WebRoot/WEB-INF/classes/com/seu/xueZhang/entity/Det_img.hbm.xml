@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.seu.xueZhang.entity.Det_img" table="DET_IMAGES">
+		<!-- ID -->
+		<id name="det_id" type="java.lang.Long" column="DET_ID">
+			<!-- ID生成策略 -->
+			<generator class="sequence">
+				<param name="sequence">DET_IMG_SEQ</param>
+			</generator>
+		</id>
+		<!-- 对象属性和表的字段的对应关系 -->
+		<property name="det_name" ></property>
+		<property name="det_size" ></property>
+		<property name="det_path" ></property>
+		<property name="det_type" ></property>
+		
+		<many-to-one name="book" column="BOOK_ID"></many-to-one>
+	</class>
+</hibernate-mapping>

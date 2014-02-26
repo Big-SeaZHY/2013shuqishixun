@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.seu.xueZhang.entity.CustomerLevel" table="CUSTOMERLEVEL">
+		<!-- ID -->
+		<id name="level_id" type="java.lang.Long" column="LEVEL_ID">
+			<!-- ID生成策略 -->
+			<generator class="sequence">
+				<param name="sequence">CUSTOMERLEVEL_SEQ</param>
+			</generator>
+		</id>
+		<!-- 对象属性和表的字段的对应关系 -->
+		<property name="level_name" ></property>
+		<property name="counts" ></property>
+		<property name="stand_point" ></property>  
+		<set name="user" cascade="all" inverse="true">
+			<key column="LEVEL_ID" foreign-key="FK_LEVEL_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.Customer" />
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:orientation="vertical" >
+
+     <EditText
+        android:id="@+id/set_register_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+    	android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:background="@drawable/text_frame"
+        android:hint="请输入用户名">
+        </EditText>
+
+	<EditText
+	    android:id="@+id/set_register_password"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:inputType="textPassword"
+	    android:singleLine="true"
+	    android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:background="@drawable/text_frame"
+	    android:hint="请输入密码">
+	 </EditText>
+ 
+	<EditText
+	    android:id="@+id/set_register_password2"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:inputType="textPassword"
+	    android:singleLine="true"
+	    android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:background="@drawable/text_frame"
+	    android:hint="请再次输入密码">
+	 </EditText>
+	 
+    <EditText
+    	android:id="@+id/set_register_address"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:singleLine="true"
+	    android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:hint="输入E-mail"
+        android:background="@drawable/text_frame"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+		android:id="@+id/set_register_phone"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:singleLine="true"
+	    android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:hint="请输入电话号码"
+        android:background="@drawable/text_frame"
+        android:inputType="phone" />
+
+    <EditText
+		android:id="@+id/set_register_postalAddress"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:singleLine="true"
+	    android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:hint="请输入地址"
+        android:background="@drawable/text_frame"
+        android:inputType="textPostalAddress" />
+
+ 	 <LinearLayout
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+	     android:paddingTop="20sp" >
+     	 <Button
+	     android:id="@+id/set_register_button"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+         android:background="#FF6600"
+         android:text="注册"
+	     >
+     </Button>
+	 </LinearLayout>
+
+</LinearLayout>

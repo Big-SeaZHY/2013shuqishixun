@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background="#f2f2f2"
+    android:paddingLeft="15sp">
+    
+   <LinearLayout
+	  	android:layout_width="wrap_content"
+	  	android:layout_height="wrap_content"
+	  	android:orientation="vertical">
+	 
+    	<ImageView 
+        android:id="@+id/bro_listitem_book_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"/>
+ 
+   </LinearLayout>
+	
+   <LinearLayout
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_marginLeft="20sp"
+      	android:orientation="vertical">
+	   	
+       <TextView 
+	       android:id="@+id/bro_listitem_book_name"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:textSize="17sp"
+	       android:textColor="#2932E1"/>
+	   	<TextView 
+	       android:id="@+id/bro_listitem_book_author"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"/>
+	    <TextView 
+		    android:id="@+id/bro_listitem_book_price"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="#FF3300"/>
+	    <TextView 
+		    android:id="@+id/bro_listitem_book_press"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"/>
+	    <TextView 
+		    android:id="@+id/bro_listitem_book_date"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"/>
+	    
+    </LinearLayout>
+</LinearLayout>

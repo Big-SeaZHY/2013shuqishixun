@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.seu.xueZhang.entity.Thu_img" table="THU_IMAGES">
+		<!-- ID -->
+		<id name="thu_id" type="java.lang.Long">  
+            <column name="THU_ID" />  
+			<!-- ID生成策略 -->
+			<generator class="sequence">
+				<param name="sequence">THU_IMG_SEQ</param>
+			</generator>
+		</id>
+		<!-- 对象属性和表的字段的对应关系 -->
+		<property name="thu_name" ></property>
+		<property name="thu_size" ></property>
+		<property name="thu_path" ></property>
+		<property name="thu_type" ></property>
+		
+		<many-to-one name="book" column="BOOK_ID"></many-to-one>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.seu.xueZhang.entity.Customer" table="CUSTOMER">
+		<!-- ID -->
+		<id column="USER_ID" name="user_id" type="java.lang.Long">
+			<!-- ID生成策略 -->
+			<generator class="sequence">
+				<param name="sequence">CUSTOMER_SEQ</param>
+			</generator>
+		</id>
+		<!-- 对象属性和表的字段的对应关系 -->
+		<property column="USERNAME" name="user_name" type="java.lang.String" />
+		<property column="POINT" name="point" type="integer" />
+		<property name="password" type="java.lang.String" column="PASSWORD"></property>
+		<property name="balance"  column="BALANCE"></property>
+		<property name="name"></property>
+		<property name="sex"></property>
+		<property name="birthday"></property>
+		<property name="age"></property>
+		<property name="phone"></property>
+		<property name="email"></property>
+		<property name="home_addr"></property>
+		<property name="idCard"></property>
+		
+		<!-- 一对多的关系映射 -->
+		<!--name:对象里的集合属性名称 column:外键的字段名 class:代表集合里的对象类型 cascade:级联操作 -->
+
+ 
+		<set name="rec_Addrs" cascade="all" inverse="true">
+			<key column="user_id" ></key>
+			<one-to-many class="com.seu.xueZhang.entity.Rec_Addr" />
+		</set>
+ 
+		<set name="comments" cascade="all" inverse="true">
+			<key column="user_id" foreign-key="FK1_USER_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.Comments" />
+		</set>
+		
+		<set name="orders" cascade="all" inverse="false">
+			<key column="USER_ID" foreign-key="FK2_USER_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.Orders" />
+		</set>
+ 
+  		<set name="citems" cascade="all" inverse="true">
+			<key column="USER_ID" foreign-key="FK3_USER_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.CollectionItems" />
+		</set>
+
+		<!-- 一对多映射配置  column:user对象对对应的外键名称	-->
+  
+		<many-to-one name="level" column="LEVEL_ID"></many-to-one>
+
+		<!-- 用户对购物车项一对多映射配置 -->
+  		<set name="pitems" cascade="all" inverse="true">
+			<key column="USER_ID" foreign-key="FK4_USER_ID"></key>
+			<one-to-many class="com.seu.xueZhang.entity.Pur_Items" />
+		</set>
+	</class>
+</hibernate-mapping>
